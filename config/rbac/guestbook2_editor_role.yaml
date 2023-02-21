@@ -1,0 +1,24 @@
+# permissions for end users to edit guestbook2s.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: guestbook2-editor-role
+rules:
+- apiGroups:
+  - webapp.my.domain
+  resources:
+  - guestbook2s
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - webapp.my.domain
+  resources:
+  - guestbook2s/status
+  verbs:
+  - get

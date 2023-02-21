@@ -1,0 +1,13 @@
+domain: my.domain
+repo: my.domain/guestbook
+resources:
+- group: webapp
+  kind: Guestbook
+  version: v1
+- group: webapp
+  kind: Guestbook2
+  version: v1
+- group: webapp
+  kind: Guestbook3
+  version: v1
+version: "2"
